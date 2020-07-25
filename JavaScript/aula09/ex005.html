@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(73, 223, 173);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id='msg'>Clique em mim</div> <!--Por getElementsByName() troca o id por name=...; Por ClassName tbm-->
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+
+        //window.document.write('Está escrito assim: ' + p1.innerText + '<br/>')
+        corpo.style.background = 'Gray'
+        //p1.style.color = 'blue'
+        // alert(p2.innerHTML) // innerHTML mostra a msg formatada, no caso o 'DOM' em negrito
+        
+        //var d = document.getElementById('msg')
+        //d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...
+        //window.document.getElementById('msg').innerText = 'Estou aguardando...'
+        //var d = document.getElementsByName('msg')[0]
+        //d.innerText = 'Estou aguardando...'
+
+        var d = document.querySelector('div#msg') // Toda div é representada por '#', e toda classe por '.'
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>
